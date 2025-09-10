@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Registro Exitoso</title>
+</head>
+
+    <body>
+        <div class="success-message">
+                <h2>Registro Entrada</h2>
+                <p>El registro de Entrada a sido registrado exitosamente.</p>
+                    <form action="{{url_for('menu_empleado')}}" method="post">
+                            <button type="submit">Volver al Menú</button>
+                    </form>
+        </div>
+    </body>
+</html>

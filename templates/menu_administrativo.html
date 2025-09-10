@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>{% block title %}Menú de Opciones{% endblock %}</title>
+</head>
+<body>
+
+<div class="menu">
+    <h2>Menú de Opciones</h2>
+    <ul>
+        <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+        <li><a href="{{url_for('informe_general')}}">Generar Informe General</a></li>
+    </ul>
+</div>
+
+<div class="contenido">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

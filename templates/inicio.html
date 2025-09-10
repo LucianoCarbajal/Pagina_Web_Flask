@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Menú de Entrada</title>
+</head>
+<div class="body">
+    <h1>Seleccione una opción</h1>
+    <ul>
+        <li><a href="{{ url_for('menu_empleado') }}">Ingresar como Trabajador</a></li>
+        <li><a href="{{ url_for('menu_administrativo') }}">Ingresar como Administrativo</a></li>
+    </ul>
+    <p>&copy; 2025 Nuevo Horizonte. Todos los derechos reservados.</p>
+</body>
+</html>

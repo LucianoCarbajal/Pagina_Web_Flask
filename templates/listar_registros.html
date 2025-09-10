@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Listar Registros</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Registros</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha</th>
+                <th>Hora Entrada</th>
+                <th>Hora Salida</th>
+                <th>Dependencia</th>
+            </tr>
+            {% for registro in registros %}
+            <tr>
+                <td>{{ trabajador.nombre }}</td>
+                <td>{{ trabajador.apellido }}</td>
+                <td>{{ registro.fecha }}</td>
+                <td>{{ registro.HoraEntrada or "Sin Entrada" }}</td>
+                <td>{{ registro.HoraSalida or "Sin salida" }}</td>
+                <td>{{ registro.dependencia }}</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="6">No hay registros para mostrar.</td></tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('menu_empleado') }}">Volver al menú</a>
+    </div>
+    
+</body>
+</html>

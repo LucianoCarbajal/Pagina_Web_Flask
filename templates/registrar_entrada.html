@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Registrar Entrada</title>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registrar Entrada</h2>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Datos del Empleado:</legend>
+            <label for="legajo">Legajo:</label>
+            <input type="int" id="legajo" name="legajo" required><br>
+            
+            <label for="dni">Dni:</label>
+            <input type="int" id="dni" name="dni" required><br>
+
+            <datalist id="dependencias">
+                <option value="D01"></option>
+                <option value="D02"></option>
+                <option value="D03"></option>
+            </datalist>
+            <label>
+                Seleccione la dependencia:
+                <input list="dependencias" name="dependencia"><br>
+            </label>
+        </fieldset>
+        <button type="submit">Registrar Entrada</button><br>
+    </form>
+</div>
+
+</body>
+</html>

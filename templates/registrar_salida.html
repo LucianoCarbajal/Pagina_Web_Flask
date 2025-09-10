@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Registrar Salida</title>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registrar Salida</h2>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Datos del Empleado:</legend>   
+            <label for="legajo">Legajo:</label>
+            <input type="int" id="legajo" name="legajo" required><br>
+            
+            <label for="dni">Dni:</label>
+            <input type="int" id="dni" name="dni" required><br>
+        </fieldset>
+        <button type="submit">Registrar salida</button><br>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Filtrar Informe General</title>
+</head>
+<body>
+<div class="form-container">
+    <h2>Filtrar Informe General</h2>
+    <form action="{{ url_for('listar') }}" method="post">
+        <fieldset>
+            <legend>Filtros</legend>
+            <label>Fecha Inicial:
+                <input type="date" name="fechaInicial" required><br>
+            </label>
+            <label>Fecha Final:
+                <input type="date" name="fechaFinal" required><br>
+            </label>
+            <label>Función:
+                <select name="funcion">
+                    <option value="todas">Todas</option>
+                    <option value="AD">Administrativo</option>
+                    <option value="DO">Docente</option>
+                    <option value="TE">Técnico</option>
+                </select><br>
+            </label>
+            <label>Dependencia:
+                <select name="dependencia">
+                    <option value="todas">Todas</option>
+                    <option value="D01">D01</option>
+                    <option value="D02">D02</option>
+                    <option value="D03">D03</option>
+                </select><br>
+            </label>
+            <button type="submit">Generar Informe</button>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

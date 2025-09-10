@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Informe General</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Informe General</h2>
+        <table>
+            <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Hora Entrada</th>
+                <th>Hora Salida</th>
+                <th>Horas Trabajadas</th>
+            </tr>
+            {% for r in registros %}
+            <tr>
+                <td>{{ r.apellido }}</td>
+                <td>{{ r.nombre }}</td>
+                <td>{{ r.fecha }}</td>
+                <td>{{ r.entrada or "Sin entrada" }}</td>
+                <td>{{ r.salida or "Sin salida" }}</td>
+                <td>
+                    {% if r.horas %}
+                        {{ r.horas }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+            </tr>
+            {% else %}
+            <tr><td colspan="6">No hay registros para mostrar.</td></tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('menu_administrativo') }}">Volver al menú</a>
+    </div>
+</body>
+</html>

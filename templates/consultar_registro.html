@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Consultar Registro</title>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Consultar Registro</h2>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Datos del Empleado:</legend>    
+            <label for="legajo">Legajo:</label>
+            <input type="int" id="legajo" name="legajo" required><br>
+            
+            <label for="dni">Dni:</label>
+            <input type="int" id="dni" name="dni" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Fecha de Registro</legend>
+            <label><!--el label contiene la descripcion del campo-->
+                Seleccione la Fecha Inicial:
+                <input type="date" name="fechaInicial"><br>
+            </label>
+            <label>
+                Seleccione la Fecha Final:
+                <input type="date" name="fechaFinal"><br>
+            </label>
+        </fieldset>    
+            
+        <button type="submit">Registrar Entrada</button><br>
+    </form>
+</div>
+
+</body>
+</html>

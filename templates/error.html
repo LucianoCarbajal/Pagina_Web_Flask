@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}"> 
+    <body>
+        <div class="error-message">
+            {% extends "menu_empleado.html" %}
+            {% block title %}Error{% endblock %}
+            {% block content %}
+            <h1>{{ error }}</h1>
+            {% endblock %}
+        </div>
+    </body>
+</html>
